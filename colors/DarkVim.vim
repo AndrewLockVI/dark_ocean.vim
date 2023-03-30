@@ -1,6 +1,9 @@
-" Vim color file
-" black
-" Created by  with ThemeCreator (https://github.com/mswift42/themecreator)
+" Created and maintained by Andrew Laack
+
+" Made to be used with the rest of my i3 config
+" which can be found here https://github.com/AndrewLockVI/I3-Nord-Theme
+" 
+" If you have any issues reach out to me at andrewlaack1@gmail.com
 
 hi clear
 
