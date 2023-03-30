@@ -1,122 +1,151 @@
-" Name:       DarkVim.vim
-" Maintainer: Andrew Laack <andrewlaack1@gmail.com>
-" Homepage:   https://github.com/AndrewLockIV/DarkVim.vim/
+" Vim color file
+" black
+" Created by  with ThemeCreator (https://github.com/mswift42/themecreator)
 
+hi clear
 
-highlight clear
-set background=dark
-if version > 580
+if exists("syntax on")
+syntax reset
 endif
+
+set t_Co=256
 let g:colors_name = "DarkVim"
 
-if has("gui_running") || &t_Co == 256
-    hi Normal cterm=NONE ctermfg=250 ctermbg=16 gui=NONE guifg=#bcbcbc guibg=#000000
-    hi Keyword cterm=NONE ctermfg=255 ctermbg=16 gui=NONE guifg=#eeeeee guibg=#000000
-    hi Constant cterm=NONE ctermfg=252 ctermbg=16 gui=NONE guifg=#d0d0d0 guibg=#000000
-    hi String cterm=NONE ctermfg=245 ctermbg=16 gui=NONE guifg=#8a8a8a guibg=#000000
-    hi Comment cterm=NONE ctermfg=240 ctermbg=16 gui=NONE guifg=#585858 guibg=#000000
-    hi Number cterm=NONE ctermfg=196 ctermbg=16 gui=NONE guifg=#ff0000 guibg=#000000
-    hi Error cterm=NONE ctermfg=255 ctermbg=88 gui=NONE guifg=#eeeeee guibg=#870000
-    hi ErrorMsg cterm=NONE ctermfg=255 ctermbg=124 gui=NONE guifg=#eeeeee guibg=#af0000
-    hi Search cterm=NONE ctermfg=245 ctermbg=236 gui=NONE guifg=#8a8a8a guibg=#303030
-    hi IncSearch cterm=reverse ctermfg=255 ctermbg=245 gui=reverse guifg=#eeeeee guibg=#8a8a8a
-    hi DiffChange cterm=NONE ctermfg=160 ctermbg=255 gui=NONE guifg=#d70000 guibg=#eeeeee
-    hi DiffText cterm=bold ctermfg=250 ctermbg=196 gui=bold guifg=#bcbcbc guibg=#ff0000
-    hi SignColumn cterm=NONE ctermfg=124 ctermbg=240 gui=NONE guifg=#af0000 guibg=#585858
-    hi SpellBad cterm=undercurl ctermfg=255 ctermbg=88 gui=undercurl guifg=#eeeeee guibg=#870000
-    hi SpellCap cterm=NONE ctermfg=255 ctermbg=124 gui=NONE guifg=#eeeeee guibg=#af0000
-    hi SpellRare cterm=NONE ctermfg=124 ctermbg=16 gui=NONE guifg=#af0000 guibg=#000000
-    hi WildMenu cterm=NONE ctermfg=240 ctermbg=255 gui=NONE guifg=#585858 guibg=#eeeeee
-    hi Pmenu cterm=NONE ctermfg=255 ctermbg=240 gui=NONE guifg=#eeeeee guibg=#585858
-    hi PmenuThumb cterm=NONE ctermfg=232 ctermbg=240 gui=NONE guifg=#080808 guibg=#585858
-    hi SpecialKey cterm=NONE ctermfg=16 ctermbg=255 gui=NONE guifg=#000000 guibg=#eeeeee
-    hi MatchParen cterm=NONE ctermfg=16 ctermbg=240 gui=NONE guifg=#000000 guibg=#585858
-    hi CursorLine cterm=NONE ctermfg=NONE ctermbg=233 gui=NONE guifg=NONE guibg=#121212
-    hi StatusLine cterm=bold,reverse ctermfg=245 ctermbg=16 gui=bold,reverse guifg=#8a8a8a guibg=#000000
-    hi StatusLineNC cterm=reverse ctermfg=236 ctermbg=16 gui=reverse guifg=#303030 guibg=#000000
-    hi Visual cterm=reverse ctermfg=250 ctermbg=16 gui=reverse guifg=#bcbcbc guibg=#000000
-    hi TermCursor cterm=reverse ctermfg=NONE ctermbg=NONE gui=reverse guifg=NONE guibg=NONE
-else
-    hi Normal cterm=NONE ctermfg=Gray ctermbg=Black
-    hi Keyword cterm=NONE ctermfg=White ctermbg=Black
-    hi Constant cterm=NONE ctermfg=Gray ctermbg=Black
-    hi String cterm=NONE ctermfg=Gray ctermbg=Black
-    hi Comment cterm=NONE ctermfg=DarkGray ctermbg=Black
-    hi Number cterm=NONE ctermfg=Red ctermbg=Black
-    hi Error cterm=NONE ctermfg=White ctermbg=DarkRed
-    hi ErrorMsg cterm=NONE ctermfg=White ctermbg=Red
-    hi Search cterm=NONE ctermfg=Gray ctermbg=DarkGray
-    hi IncSearch cterm=reverse ctermfg=White ctermbg=Gray
-    hi DiffChange cterm=NONE ctermfg=Red ctermbg=White
-    hi DiffText cterm=bold ctermfg=Gray ctermbg=Red
-    hi SignColumn cterm=NONE ctermfg=Red ctermbg=DarkGray
-    hi SpellBad cterm=undercurl ctermfg=White ctermbg=DarkRed
-    hi SpellCap cterm=NONE ctermfg=White ctermbg=Red
-    hi SpellRare cterm=NONE ctermfg=Red ctermbg=Black
-    hi WildMenu cterm=NONE ctermfg=DarkGray ctermbg=White
-    hi Pmenu cterm=NONE ctermfg=White ctermbg=DarkGray
-    hi PmenuThumb cterm=NONE ctermfg=Black ctermbg=DarkGray
-    hi SpecialKey cterm=NONE ctermfg=Black ctermbg=White
-    hi MatchParen cterm=NONE ctermfg=Black ctermbg=DarkGray
-    hi CursorLine cterm=NONE ctermfg=NONE ctermbg=Black
-    hi StatusLine cterm=bold,reverse ctermfg=Gray ctermbg=Black
-    hi StatusLineNC cterm=reverse ctermfg=DarkGray ctermbg=Black
-    hi Visual cterm=reverse ctermfg=Gray ctermbg=Black
-    hi TermCursor cterm=reverse ctermfg=NONE ctermbg=NONE
-endif
-highlight! link Boolean Normal
-highlight! link Delimiter Normal
-highlight! link Identifier Normal
-highlight! link Title Normal
-highlight! link Debug Normal
-highlight! link Exception Normal
-highlight! link FoldColumn Normal
-highlight! link Macro Normal
-highlight! link ModeMsg Normal
-highlight! link MoreMsg Normal
-highlight! link Question Normal
-highlight! link Conditional Keyword
-highlight! link Statement Keyword
-highlight! link Operator Keyword
-highlight! link Structure Keyword
-highlight! link Function Keyword
-highlight! link Include Keyword
-highlight! link Type Keyword
-highlight! link Typedef Keyword
-highlight! link Todo Keyword
-highlight! link Label Keyword
-highlight! link Define Keyword
-highlight! link DiffAdd Keyword
-highlight! link diffAdded Keyword
-highlight! link diffCommon Keyword
-highlight! link Directory Keyword
-highlight! link PreCondit Keyword
-highlight! link PreProc Keyword
-highlight! link Repeat Keyword
-highlight! link Special Keyword
-highlight! link SpecialChar Keyword
-highlight! link StorageClass Keyword
-highlight! link SpecialComment String
-highlight! link CursorLineNr String
-highlight! link Character Number
-highlight! link Float Number
-highlight! link Tag Number
-highlight! link Folded Number
-highlight! link WarningMsg Number
-highlight! link iCursor SpecialKey
-highlight! link SpellLocal SpellCap
-highlight! link LineNr Comment
-highlight! link NonText Comment
-highlight! link DiffDelete Comment
-highlight! link diffRemoved Comment
-highlight! link PmenuSbar Visual
-highlight! link PmenuSel Visual
-highlight! link VisualNOS Visual
-highlight! link VertSplit Visual
-highlight! link Cursor StatusLine
-highlight! link Underlined SpellRare
-highlight! link rstEmphasis SpellRare
-highlight! link diffChanged DiffChange
 
+" Define reusable colorvariables.
+let s:bg="#080d17"
+let s:fg="#ffffff"
+let s:fg2="#ebebeb"
+let s:fg3="#d6d6d6"
+let s:fg4="#c2c2c2"
+let s:bg2="#080d17"
+let s:bg3="#080d17"
+let s:bg4="#4d4d4d"
+let s:keyword="#99c1f1"
+let s:builtin="#1c71d8"
+let s:const= "#d4d4d4"
+let s:comment="#53eaff"
+let s:func="#ad7aff"
+let s:str="#53eaff"
+let s:type="#d4d4d4"
+let s:var="#dfdaff"
+let s:warning="#ff0000"
+let s:warning2="#ff8800"
+
+exe 'hi Normal guifg='s:fg' guibg='s:bg
+exe 'hi Cursor guifg='s:bg' guibg='s:fg
+exe 'hi CursorLine  guibg='s:bg2
+exe 'hi CursorLineNr guifg='s:str' guibg='s:bg
+exe 'hi CursorColumn  guibg='s:bg2
+exe 'hi ColorColumn  guibg='s:bg2
+exe 'hi LineNr guifg='s:fg2' guibg='s:bg2
+exe 'hi VertSplit guifg='s:fg3' guibg='s:bg3
+exe 'hi MatchParen guifg='s:warning2'  gui=underline'
+exe 'hi StatusLine guifg='s:fg2' guibg='s:bg3' gui=bold'
+exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
+exe 'hi PmenuSel  guibg='s:bg3
+exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
+exe 'hi Search   gui=underline'
+exe 'hi Directory guifg='s:const
+exe 'hi Folded guifg='s:fg4' guibg='s:bg
+exe 'hi WildMenu guifg='s:str' guibg='s:bg
+
+exe 'hi Boolean guifg='s:const
+exe 'hi Character guifg='s:const
+exe 'hi Comment guifg='s:comment
+exe 'hi Conditional guifg='s:keyword
+exe 'hi Constant guifg='s:const
+exe 'hi Todo guibg='s:bg
+exe 'hi Define guifg='s:keyword
+exe 'hi DiffAdd guifg=#fafafa guibg=#123d0f gui=bold'
+exe 'hi DiffDelete guibg='s:bg2
+exe 'hi DiffChange  guibg=#151b3c guifg=#fafafa'
+exe 'hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold'
+exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
+exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
+exe 'hi Float guifg='s:const
+exe 'hi Function guifg='s:func
+exe 'hi Identifier guifg='s:type'  gui=italic'
+exe 'hi Keyword guifg='s:keyword'  gui=bold'
+exe 'hi Label guifg='s:var
+exe 'hi NonText guifg='s:bg4' guibg='s:bg2
+exe 'hi Number guifg='s:const
+exe 'hi Operator guifg='s:keyword
+exe 'hi PreProc guifg='s:keyword
+exe 'hi Special guifg='s:fg
+exe 'hi SpecialKey guifg='s:fg2' guibg='s:bg2
+exe 'hi Statement guifg='s:keyword
+exe 'hi StorageClass guifg='s:type'  gui=italic'
+exe 'hi String guifg='s:str
+exe 'hi Tag guifg='s:keyword
+exe 'hi Title guifg='s:fg'  gui=bold'
+exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
+exe 'hi Type guifg='s:type
+exe 'hi Underlined   gui=underline'
+
+" Neovim Terminal Mode
+let g:terminal_color_0 = s:bg
+let g:terminal_color_1 = s:warning
+let g:terminal_color_2 = s:keyword
+let g:terminal_color_3 = s:bg4
+let g:terminal_color_4 = s:func
+let g:terminal_color_5 = s:builtin
+let g:terminal_color_6 = s:fg3
+let g:terminal_color_7 = s:str
+let g:terminal_color_8 = s:bg2
+let g:terminal_color_9 = s:warning2
+let g:terminal_color_10 = s:fg2
+let g:terminal_color_11 = s:var
+let g:terminal_color_12 = s:type
+let g:terminal_color_13 = s:const
+let g:terminal_color_14 = s:fg4
+let g:terminal_color_15 = s:comment
+
+" Ruby Highlighting
+exe 'hi rubyAttribute guifg='s:builtin
+exe 'hi rubyLocalVariableOrMethod guifg='s:var
+exe 'hi rubyGlobalVariable guifg='s:var' gui=italic'
+exe 'hi rubyInstanceVariable guifg='s:var
+exe 'hi rubyKeyword guifg='s:keyword
+exe 'hi rubyKeywordAsMethod guifg='s:keyword' gui=bold'
+exe 'hi rubyClassDeclaration guifg='s:keyword' gui=bold'
+exe 'hi rubyClass guifg='s:keyword' gui=bold'
+exe 'hi rubyNumber guifg='s:const
+
+" Python Highlighting
+exe 'hi pythonBuiltinFunc guifg='s:builtin
+
+" Go Highlighting
+exe 'hi goBuiltins guifg='s:builtin
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_build_constraints      = 1
+let g:go_highlight_chan_whitespace_error  = 1
+let g:go_highlight_extra_types            = 1
+let g:go_highlight_fields                 = 1
+let g:go_highlight_format_strings         = 1
+let g:go_highlight_function_calls         = 1
+let g:go_highlight_function_parameters    = 1
+let g:go_highlight_functions              = 1
+let g:go_highlight_generate_tags          = 1
+let g:go_highlight_operators              = 1
+let g:go_highlight_space_tab_error        = 1
+let g:go_highlight_string_spellcheck      = 1
+let g:go_highlight_types                  = 1
+let g:go_highlight_variable_assignments   = 1
+let g:go_highlight_variable_declarations  = 1
+
+" Javascript Highlighting
+exe 'hi jsBuiltins guifg='s:builtin
+exe 'hi jsFunction guifg='s:keyword' gui=bold'
+exe 'hi jsGlobalObjects guifg='s:type
+exe 'hi jsAssignmentExps guifg='s:var
+
+" Html Highlighting
+exe 'hi htmlLink guifg='s:var' gui=underline'
+exe 'hi htmlStatement guifg='s:keyword
+exe 'hi htmlSpecialTagName guifg='s:keyword
+
+" Markdown Highlighting
+exe 'hi mkdCode guifg='s:builtin
 
 
